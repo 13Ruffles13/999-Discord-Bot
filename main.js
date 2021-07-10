@@ -75,3 +75,5 @@ client.on('message', message =>{
 
 //Roles Discord[\@ role name to get ID]
 client.login(process.env.token); //TokenBot
+
+//Upon editing must save project save summary on GitHub and commit to master
