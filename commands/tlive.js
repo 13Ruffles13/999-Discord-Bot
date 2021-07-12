@@ -2,6 +2,7 @@ module.exports = {
     name: 'tlive',
     description: "Twitch Toni Embed!",
     execute(message, args, Discord){
+        if(message.member.roles.cache.has('849076327058374717')){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#00334C')
         .setTitle('Toni is Live!')
@@ -16,5 +17,6 @@ module.exports = {
         .setFooter('Make sure to check out the rules channel');
 
         message.channel.send(newEmbed);
+        }//if
     }
 }

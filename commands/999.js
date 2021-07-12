@@ -6,6 +6,7 @@ module.exports = {
     name: '999',
     description: '999 music',
     async execute(message, args){
+        if(message.member.roles.cache.has('849076327058374717')){
         const voiceChannel = message.member.voice.channel;
 
         //Validate arguments
@@ -64,6 +65,8 @@ module.exports = {
         }else{
             message.channel.send('No video results found');
         }
+
+        }//if
 
     }
 }

@@ -15,12 +15,15 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
+
+//Bot status
 client.once('ready', () => {
     console.log('Hotboys is online!')
     client.user.setActivity('999', { type: 'WATCHING'}).catch(console.error);
 
 });
 
+//Auto-join New members and announce in welcome channel
 client.on('guildMemberAdd', guildMember =>{
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
 
