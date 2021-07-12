@@ -8,7 +8,7 @@ module.exports = {
         .setTitle('Toni is Live!')
         .setURL('https://m.twitch.tv/tvalentine_')
         .setDescription('Come watch the stream!')
-        timestamp = datetime.now()
+        .setTimestamp()
         .addFields(
             {name: 'Rule 1', value: 'Be rootin'},
             {name: 'Rule 2', value: 'Be tootin'},
