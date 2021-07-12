@@ -5,7 +5,9 @@ module.exports = {
        
         //Checks Role by ID or Name
         //let role = message.guild.roles.cache.find(r => r.name === "Certified 999"); //To check by name
-        if(message.member.roles.cache.has('849076908523520020')){ 
+        if(message.member.roles.cache.has('849076327058374717')){ 
+            message.channel.send('https://m.twitch.tv/tvalentine_');
+        }else if(message.member.roles.cache.has('849077623782899743')){
             message.channel.send('https://m.twitch.tv/tvalentine_');
         }
         else{
@@ -15,3 +17,7 @@ module.exports = {
         }
     }
 }
+
+//Owner key: 849076327058374717
+//Admin key: 849077623782899743
+//Certified 999: 849076908523520020
