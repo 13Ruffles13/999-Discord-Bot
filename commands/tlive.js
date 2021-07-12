@@ -18,5 +18,8 @@ module.exports = {
 
         message.channel.send(newEmbed);
         }//if
+        else{
+            message.channel.send('Role does not have command permissions');
+        }//else
     }
 }

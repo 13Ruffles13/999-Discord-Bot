@@ -11,5 +11,8 @@ module.exports = {
         await voiceChannel.leave(); //leave voice channel
         await message.channel.send('Leaving channel :smiling_face_with_tear:')
         }//if
+        else{
+            message.channel.send('Role does not have command permissions');
+        }//else
     }
 }

@@ -5,5 +5,8 @@ module.exports = {
         if(message.member.roles.cache.has('849076327058374717')){
         message.channel.send('pong!');
         }//if
+        else{
+            message.channel.send('Role does not have command permissions');
+        }//else
     }
 }
