@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args, Discord){
         if(message.member.roles.cache.has('849077623782899743')){
         const newEmbed = new Discord.MessageEmbed()
-        .setColor('#ffe4e1')
+        .setColor('#e773d2')
         .setTitle('Toni is Live!')
         .setURL('https://m.twitch.tv/tvalentine_')
         .setDescription('Come watch the stream!')
