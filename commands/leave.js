@@ -4,7 +4,7 @@ module.exports = {
     name: 'leave',
     description: 'Stop 999 music and leave channel',
     async execute(message, args){
-        if(message.member.roles.cache.has('849076327058374717')){
+        if(message.member.roles.cache.has('849077623782899743')){
         const voiceChannel = message.member.voice.channel;
 
         if(!voiceChannel) return message.channel.send("You need to be in a voice channel to stop the music!");
