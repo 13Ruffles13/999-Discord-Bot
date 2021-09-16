@@ -26,10 +26,10 @@ module.exports = {
             }
         }
 
-        if(!serverQueue){
+        if(!args){
         }else{
-            serverQueue.songs.push(song);
-            console.log(serverQueue.songs);
+            args.songs.push(song);
+            console.log(args.songs);
             return message.channel.send(`${song.title} has been added to the queue!`);
         }
 
