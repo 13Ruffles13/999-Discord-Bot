@@ -65,6 +65,12 @@ module.exports = {
         }else{
             message.channel.send('No video results found');
         }
+        if(!serverQueue){
+        }else{
+            serverQueue.songs.push(song);
+            console.log(serverQueue.songs);
+            return message.channel.send(`${song.title} has been added to the queue!`);
+        }
 
         }//if
 
