@@ -60,7 +60,7 @@ client.on('message', message =>{
     }
 });
 
-//Command block {Music functions}
+//Command block {Music functions, clear messages, Music leave function}
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot)return; //Must start with prefix
 
@@ -73,6 +73,18 @@ client.on('message', message =>{
         client.commands.get('999').execute(message, args);
     } else if(command === 'leave'){
         client.commands.get('leave').execute(message, args);
+    }
+});
+
+//Command block {Music functions}
+client.on('message', message =>{
+    if(!message.content.startsWith(prefix) || message.author.bot)return; //Must start with prefix
+
+    const args = message.content.slice(prefix.length).split(/ +/); //To have multiple commands with space
+    const command = args.shift().toLowerCase();
+
+    if(command === 'play'){
+        client.commands.get('play').execute(message, args);
     }
 });
 
