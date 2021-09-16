@@ -6,8 +6,9 @@ const queue = new Map();
 
 module.exports = {
     name: 'play',
-    description: 'play music'
+    description: 'play music',
     async execute(message, queue){
         const serverQueue = queue.get(message.guild.id);
+        
     }
 }
