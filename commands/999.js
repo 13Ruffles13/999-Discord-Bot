@@ -26,13 +26,6 @@ module.exports = {
             }
         }
 
-        if(!args){
-        }else{
-            args.songs.push(song);
-            console.log(args.songs);
-            return message.channel.send(`${song.title} has been added to the queue!`);
-        }
-
         //Url function
         if(validURL(args[0])){
             //message.channel.send('You entered a correct url!');
