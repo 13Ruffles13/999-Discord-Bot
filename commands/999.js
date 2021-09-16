@@ -26,6 +26,13 @@ module.exports = {
             }
         }
 
+        if(!serverQueue){
+        }else{
+            serverQueue.songs.push(song);
+            console.log(serverQueue.songs);
+            return message.channel.send(`${song.title} has been added to the queue!`);
+        }
+
         //Url function
         if(validURL(args[0])){
             //message.channel.send('You entered a correct url!');
@@ -53,6 +60,7 @@ module.exports = {
         }
 
         const video = await videoFinder(args.join(' '));
+
         //After a result
         if(video){
             const stream = ytdl(video.url, {filter: 'audioonly'}); //audio only
@@ -64,12 +72,6 @@ module.exports = {
             await message.reply(`:fire: Now Playing ***${video.title}*** :fire:`)
         }else{
             message.channel.send('No video results found');
-        }
-        if(!serverQueue){
-        }else{
-            serverQueue.songs.push(song);
-            console.log(serverQueue.songs);
-            return message.channel.send(`${song.title} has been added to the queue!`);
         }
 
         }//if
