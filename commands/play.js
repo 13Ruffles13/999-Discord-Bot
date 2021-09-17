@@ -14,6 +14,6 @@ module.exports = {
         if(!voice_channel) return message.channel.send('You need to be in a channel to execute this command!');
         const permissions = voice_channel.permissionsFor(message.client.user);
         //Validation 2:
-        if(!permissions.has('CONNECT'))
+        if(!permissions.has('CONNECT'));
     }
 }
