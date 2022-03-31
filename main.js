@@ -2,8 +2,6 @@ const Discord = require('discord.js'); //Node module
 
 const client = new Discord.Client(); //Creating bot
 
-client.login(process.env.DJS_TOKEN)
-
 const prefix = '~';
 
 const fs = require('fs');
