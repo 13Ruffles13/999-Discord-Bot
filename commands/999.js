@@ -6,6 +6,7 @@ module.exports = {
     name: '999',
     description: '999 music',
     async execute(message, args){
+        if(message.member.roles.cache.has('849077623782899743')){
         const voiceChannel = message.member.voice.channel;
 
         //Validate arguments
@@ -52,6 +53,7 @@ module.exports = {
         }
 
         const video = await videoFinder(args.join(' '));
+
         //After a result
         if(video){
             const stream = ytdl(video.url, {filter: 'audioonly'}); //audio only
@@ -64,6 +66,12 @@ module.exports = {
         }else{
             message.channel.send('No video results found');
         }
+
+        }//if
+
+        else{
+            message.channel.send('Role does not have command permissions');
+        }//else
 
     }
 }

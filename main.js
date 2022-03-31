@@ -15,12 +15,15 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
+
+//Bot status
 client.once('ready', () => {
     console.log('Hotboys is online!')
     client.user.setActivity('999', { type: 'WATCHING'}).catch(console.error);
 
 });
 
+//Auto-join New members and announce in welcome channel
 client.on('guildMemberAdd', guildMember =>{
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
 
@@ -57,7 +60,7 @@ client.on('message', message =>{
     }
 });
 
-//Command block {Music functions}
+//Command block {Music functions, clear messages, Music leave function}
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot)return; //Must start with prefix
 
@@ -73,7 +76,19 @@ client.on('message', message =>{
     }
 });
 
+//Command block {Music functions}
+client.on('message', message =>{
+    if(!message.content.startsWith(prefix) || message.author.bot)return; //Must start with prefix
+
+    const args = message.content.slice(prefix.length).split(/ +/); //To have multiple commands with space
+    const command = args.shift().toLowerCase();
+
+    if(command === 'play'){
+        client.commands.get('play').execute(message, args);
+    }
+});
+
 //Roles Discord[\@ role name to get ID]
-client.login(process.env.token); //TokenBot
+client.login(process.env.DJS_TOKEN); //TokenBot
 
 //Upon editing must save project save summary on GitHub and commit to master

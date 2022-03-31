@@ -2,6 +2,11 @@ module.exports = {
     name: 'ping',
     description: 'This is a ping commmand!',
     execute(message, args){
-        message.channel.send('pong!');
+        if(message.member.roles.cache.has('849077623782899743')){
+        message.channel.send(`:ping_pong: Pong!`);
+        }//if
+        else{
+            message.channel.send('Role does not have command permissions');
+        }//else
     }
 }
