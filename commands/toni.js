@@ -17,7 +17,17 @@ module.exports = {
     }
 }
 
-//Owner key: 849076327058374717
-//Admin key: 849077623782899743
-//Certified 999: 849076908523520020
-//Member key: 863238012891299880
+/*
+    HotBoy ID's 
+
+    Owner key: 849076327058374717
+    Admin key: 849077623782899743
+    Certified 999: 849076908523520020
+    Member key: 863238012891299880
+*/
+
+/*
+    HangOuts ID's
+
+    BD key: 354050497591771136
+*/
