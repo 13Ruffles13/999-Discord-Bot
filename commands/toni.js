@@ -6,7 +6,7 @@ module.exports = {
         //Checks Role by ID or Name
         //let role = message.guild.roles.cache.find(r => r.name === "Certified 999"); //To check by name
 
-        if(message.member.roles.cache.has(('849077623782899743' || '354050497591771136'))){ 
+        if(message.member.roles.cache.has(('354050497591771136'))){ 
             message.channel.send('https://m.twitch.tv/tvalentine_');
         }
         else{
