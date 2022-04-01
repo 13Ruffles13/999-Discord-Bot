@@ -2,7 +2,7 @@ module.exports = {
     name: 'tlive',
     description: "Twitch Toni Embed!",
     execute(message, args, Discord){
-        if(message.member.roles.cache.has('849077623782899743')){
+        if(message.member.roles.cache.has(('849077623782899743' || '354050497591771136'))){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#e773d2')
         .setTitle('Toni is Live!')

@@ -6,7 +6,7 @@ module.exports = {
     name: '999',
     description: '999 music',
     async execute(message, args){
-        if(message.member.roles.cache.has('849077623782899743')){
+        if(message.member.roles.cache.has(('849077623782899743' || '354050497591771136'))){
         const voiceChannel = message.member.voice.channel;
 
         //Validate arguments
